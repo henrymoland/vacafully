@@ -1,8 +1,22 @@
+import Image from "next/image";
+import logo from "../assets/logo.svg";
+
 function Header() {
   return (
-    <div>
-      <h1>I am the header</h1>
-    </div>
+    <header>
+      <div>
+        <Image
+          src={logo}
+          layout="fill"
+          objectFit="contain"
+          objectPosition="left"
+        />
+      </div>
+
+      <div></div>
+
+      <div></div>
+    </header>
   );
 }
 
