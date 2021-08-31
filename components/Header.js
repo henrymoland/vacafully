@@ -25,7 +25,13 @@ function Header() {
         <SearchIcon className="hidden md:inline-flex h-8 bg-blue-500 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
 
-      <div></div>
+      {/* Authentication Links */}
+      <div className="flex space-x-4 items-center justify-end text-gray-500">
+        <p className="cursor-pointer">Login</p>
+        <p className="rounded-full py-2 px-4 bg-blue-500 text-white shadow-sm cursor-pointer">
+          Sign up
+        </p>
+      </div>
     </header>
   );
 }
