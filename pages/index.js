@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
+import MediumCard from "../components/MediumCard";
 import TestimonialCard from "../components/TestimonialCard";
 
-export default function Home({ testimonialData }) {
+export default function Home({ testimonialData, popularDestinationData }) {
   return (
     <div className="">
       <Head>
@@ -15,6 +17,7 @@ export default function Home({ testimonialData }) {
       <Banner />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
+        {/* Testimonials */}
         <section className="pt-6">
           <h2 className="text-3xl font-semibold pb-2">
             What guests are saying about homes in United States
@@ -40,6 +43,26 @@ export default function Home({ testimonialData }) {
             )}
           </div>
         </section>
+
+        {/* Popular Destinations */}
+        <section>
+          <h2 className="text-3xl font-semibold mt-8 py-8">
+            Explore Popular Destinations
+          </h2>
+
+          <div className="flex space-x-5 overflow-scroll scrollbar-hide mb-4">
+            {popularDestinationData?.map(({ image, title }) => (
+              <MediumCard key={image} img={image} title={title} />
+            ))}
+          </div>
+        </section>
+
+        <LargeCard
+          img="https://i.ibb.co/zZXy4h5/2da67c1c-0c61-4629-8798-1d4de1ac9291.webp"
+          title="The Greatest Outdoors"
+          description="Wishlist curated by Vacafully."
+          buttonText="Get Inspired"
+        />
       </main>
     </div>
   );
@@ -50,9 +73,14 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
+  const popularDestinationData = await fetch(
+    "https://jsonkeeper.com/b/KUKU"
+  ).then((res) => res.json());
+
   return {
     props: {
       testimonialData,
+      popularDestinationData,
     },
   };
 }
