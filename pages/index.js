@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
@@ -57,12 +58,16 @@ export default function Home({ testimonialData, popularDestinationData }) {
           </div>
         </section>
 
+        {/* Call to Action Card */}
         <LargeCard
           img="https://i.ibb.co/zZXy4h5/2da67c1c-0c61-4629-8798-1d4de1ac9291.webp"
           title="The Greatest Outdoors"
           description="Wishlist curated by Vacafully."
           buttonText="Get Inspired"
         />
+
+        {/* Footer */}
+        <Footer />
       </main>
     </div>
   );
