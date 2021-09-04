@@ -13,7 +13,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function InfoCard({ img, title, guests, beds, bath, location, price }) {
   return (
-    <div className="flex py-7 px-2 border-b cursor-pointer hover:opacity-80 hover:shadow-lg">
+    <div className="flex py-7 px-2 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
       {/* LEFT */}
       <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
         <Image
@@ -21,7 +21,7 @@ function InfoCard({ img, title, guests, beds, bath, location, price }) {
           layout="fill"
           object-fit="cover"
           alt="Property image"
-          className="rounded-md"
+          className="rounded-2xl"
         />
       </div>
 
