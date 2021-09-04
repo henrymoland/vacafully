@@ -24,7 +24,7 @@ function TestimonialCard({
       {/* Middle */}
       <div className="flex mt-3">
         {[...Array(5)].map((star) => {
-          return <StarIcon className="text-blue-400 h-6" />;
+          return <StarIcon className="text-yellow-500 h-6" />;
         })}
       </div>
 

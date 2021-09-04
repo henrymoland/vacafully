@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../assets/vacafully_logo_blue400.png";
+import logo from "../assets/logo.svg";
 import { SearchIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
@@ -22,7 +22,7 @@ function Header() {
       {/* Logo */}
       <div
         onClick={() => router.push("/")}
-        className="relative flex items-center h-10 cursor-pointer my-auto"
+        className="relative flex items-center h-12 cursor-pointer my-auto"
       >
         <Image
           src={logo}
@@ -43,14 +43,14 @@ function Header() {
         />
         <SearchIcon
           onClick={search}
-          className="hidden md:inline-flex h-8 bg-blue-400 text-white rounded-full p-2 cursor-pointer md:mx-2"
+          className="hidden md:inline-flex h-8 bg-yellow-500 text-white rounded-full p-2 cursor-pointer md:mx-2"
         />
       </div>
 
       {/* Authentication Links */}
       <div className="flex space-x-4 items-center justify-end text-gray-500">
         <p className="cursor-pointer">Login</p>
-        <p className="rounded-full py-2 px-4 bg-blue-400 text-white shadow-sm cursor-pointer">
+        <p className="rounded-full py-2 px-4 bg-yellow-500 text-white shadow-sm cursor-pointer">
           Sign up
         </p>
       </div>
