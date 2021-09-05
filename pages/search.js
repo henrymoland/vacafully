@@ -21,11 +21,11 @@ function Search({ searchResults }) {
           </h1>
 
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
-            <p className="button">Cancellation Flexibility</p>
-            <p className="button">Type of Place</p>
-            <p className="button">Price</p>
-            <p className="button">Rooms and Beds</p>
-            <p className="button">More Filters</p>
+            <p className="button-white">Cancellation Flexibility</p>
+            <p className="button-white">Type of Place</p>
+            <p className="button-white">Price</p>
+            <p className="button-white">Rooms and Beds</p>
+            <p className="button-white">More Filters</p>
           </div>
 
           <div className="flex flex-col">
