@@ -49,8 +49,13 @@ function Header() {
 
       {/* Authentication Links */}
       <div className="flex space-x-4 items-center justify-end text-gray-500">
-        <p className="cursor-pointer">Login</p>
-        <p className="rounded-full py-2 px-4 bg-yellow-500 text-white shadow-sm cursor-pointer">
+        <p className="cursor-pointer" onClick={() => router.push("/login")}>
+          Login
+        </p>
+        <p
+          className="rounded-full py-2 px-4 bg-yellow-500 text-white shadow-sm cursor-pointer"
+          onClick={() => router.push("/register")}
+        >
           Sign up
         </p>
       </div>
