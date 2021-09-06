@@ -53,7 +53,7 @@ function Header() {
           Login
         </p>
         <p
-          className="rounded-full py-2 px-4 bg-yellow-500 text-white shadow-sm cursor-pointer"
+          className="rounded-full py-2 px-4 bg-yellow-500 text-white font-bold shadow-sm cursor-pointer"
           onClick={() => router.push("/register")}
         >
           Sign up

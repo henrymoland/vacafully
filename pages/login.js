@@ -23,7 +23,7 @@ function login() {
             </label>
             <input
               placeholder="myemail@gmail.com"
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-700focus:outline-none focus:bg-white focus:shadow-sm focus:border-yellow-400 mt-2"
+              className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
               id="email"
               type="text"
               value={email}
@@ -38,7 +38,7 @@ function login() {
             </label>
             <input
               placeholder="************"
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:shadow-sm focus:border-yellow-400  mt-2"
+              className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300  mt-2"
               id="password"
               type="text"
               value={password}
