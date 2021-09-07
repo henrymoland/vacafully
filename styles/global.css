@@ -9,3 +9,12 @@
     @apply bg-yellow-500 py-2 px-4 rounded-full text-white font-semibold shadow-sm cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out;
   }
 }
+
+.ant-picker {
+  border-color: #e0e0e0 !important;
+}
+
+.ant-picker-focused {
+  border-color: #c0c0c0 !important;
+  box-shadow: 1px 1px 12px #eeeeee !important;
+}

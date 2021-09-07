@@ -14,8 +14,12 @@ import { faTv } from "@fortawesome/free-solid-svg-icons";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import { DatePicker } from "antd";
+import { useState } from "react";
 
 function Listing() {
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+
   return (
     <div>
       <Header />
@@ -52,25 +56,27 @@ function Listing() {
               />
             </div>
 
-            <form class="w-full md:w-[350px] md: ml-6 lg:w-[400px] lg:ml-20 flex flex-col items-center border rounded mt-8 md:mt-0 mb-10">
+            <form className="w-full md:w-[350px] sm:ml-2 md:ml-6 md:mt-0 lg:w-[400px] lg:ml-20 flex flex-col items-center border rounded mt-8 mb-10">
               <h1 className="text-[28px] font-bold mt-6 mb-5">
                 $325 <span className="font-normal">/ night</span>
               </h1>
 
-              {/* CHECK IN */}
+              {/* DATE PICKER CHECK IN */}
               <p className="text-sm font-bold text-gray-900">Check In</p>
 
               <DatePicker
                 placeholder="select date"
                 className="form-control m-2 border rounded py-2 px-4 text-gray-500"
+                onChange={(date, dateString) => console.log(date, dateString)}
               />
 
-              {/* CHECK OUT */}
+              {/* DATE PICKER CHECK OUT */}
               <p className="text-sm font-bold text-gray-900 mt-4">Check Out</p>
 
               <DatePicker
                 placeholder="Select date"
                 className="form-control m-2 border rounded py-2 px-4 text-gray-500"
+                onChange={(date, dateString) => setFromDate(dateString)}
               />
 
               <button className="bg-yellow-500 font-bold text-white py-3 px-8 rounded-full mt-6 mb-6">

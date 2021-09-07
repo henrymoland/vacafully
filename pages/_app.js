@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
+import "antd/dist/antd.css";
 
 const progress = new ProgressBar({
   size: 4,
