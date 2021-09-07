@@ -6,7 +6,7 @@
   }
 
   .button-yellow {
-    @apply bg-yellow-500 py-2 px-4 rounded-full text-white font-semibold shadow-sm cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out;
+    @apply bg-yellow-500 py-2 px-4 rounded text-white font-semibold shadow-sm cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out;
   }
 }
 

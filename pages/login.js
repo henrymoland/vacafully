@@ -50,7 +50,9 @@ function login() {
             </p>
           </div>
 
-          <button className="button-yellow w-full mt-6">Sign Up</button>
+          <button className="button-yellow w-full mt-6 text-[16px]">
+            Sign Up
+          </button>
 
           <p className="text-sm text-center mt-4 text-gray-900">
             Don't have a Vacafully account?{" "}

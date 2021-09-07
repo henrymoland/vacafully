@@ -33,7 +33,7 @@ function Header() {
       </div>
 
       {/* Search Input */}
-      <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+      <div className="flex items-center md:border rounded py-2 md:shadow-sm">
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
@@ -43,7 +43,7 @@ function Header() {
         />
         <SearchIcon
           onClick={search}
-          className="hidden md:inline-flex h-8 bg-yellow-500 text-white rounded-full p-2 cursor-pointer md:mx-2"
+          className="hidden md:inline-flex h-10 text-gray-400 rounded p-2 cursor-pointer md:mx-2"
         />
       </div>
 
@@ -53,7 +53,7 @@ function Header() {
           Login
         </p>
         <p
-          className="rounded-full py-2 px-4 bg-yellow-500 text-white font-bold shadow-sm cursor-pointer"
+          className="rounded py-2 px-4 bg-yellow-500 text-white font-bold shadow-sm cursor-pointer"
           onClick={() => router.push("/register")}
         >
           Sign up

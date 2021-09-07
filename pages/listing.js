@@ -79,7 +79,7 @@ function Listing() {
                 onChange={(date, dateString) => setFromDate(dateString)}
               />
 
-              <button className="bg-yellow-500 font-bold text-white py-3 px-8 rounded-full mt-6 mb-6">
+              <button className="bg-yellow-500 font-bold text-white py-3 px-8 rounded mt-6 mb-6">
                 {" "}
                 Book Now
               </button>
