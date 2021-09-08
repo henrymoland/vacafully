@@ -34,7 +34,7 @@ function Host() {
               {/* UPLOAD IMAGE -- LEFT SIDE --*/}
               <div>
                 <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
-                  Upload photo of your listing
+                  Upload a photo of your listing
                 </label>
                 <div className="flex items-center justify-center md:w-[500px] lg:w-[600px]">
                   <label className="flex flex-col w-full md:h-[400px] lg:h-[460px] border-4 rounded border-yellow-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
@@ -67,11 +67,11 @@ function Host() {
                 {/* PROPERTY NAME  */}
                 <div className="mb-10">
                   <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
-                    Property Name
+                    What is the name of your listing?
                   </label>
                   <input
                     placeholder="Property Name"
-                    className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                    className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                     id="title"
                     type="text"
                     value={propertyName}
@@ -86,7 +86,7 @@ function Host() {
                   </label>
                   <input
                     placeholder="Address"
-                    className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                    className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                     id="title"
                     type="text"
                     value={address}
@@ -101,7 +101,7 @@ function Host() {
                     </label>
                     <input
                       placeholder="Address"
-                      className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                      className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                       id="title"
                       type="text"
                       value={location}
@@ -115,12 +115,105 @@ function Host() {
                     </label>
                     <input
                       placeholder="Zipcode"
-                      className="bg-gray-200 appearance-none border border-gray-200 rounded w-1/4 py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                      className="bg-white appearance-none border border-gray-200 rounded w-[100px] py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                       id="title"
                       type="text"
                       value={zipCode}
                       onChange={(e) => setZipCode(e.target.value)}
                     />
+                  </div>
+                </div>
+
+                {/* PRICE */}
+                <div className="flex">
+                  <div className="mb-10 flex-grow">
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      How much you want to earn?
+                    </label>
+
+                    <input
+                      placeholder="Price"
+                      className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
+                      id="title"
+                      type="number"
+                      value={price}
+                      onChange={(e) => setPrice(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                {/* BED */}
+                <div className="flex">
+                  <div className="mb-10 flex-grow">
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      How many bedrooms?
+                    </label>
+                    <select
+                      placeholder="Beds"
+                      className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
+                      id="beds"
+                      type="number"
+                      value={beds}
+                      onChange={(e) => setBeds(e.target.value)}
+                    >
+                      <option>1 bedroom</option>
+                      <option>2 bedrooms</option>
+                      <option>3 bedrooms</option>
+                      <option>4 bedroom</option>
+                      <option>5 bedrooms</option>
+                      <option>6 bedrooms</option>
+                    </select>
+                  </div>
+
+                  {/* BATH */}
+                  <div className="mb-10 ml-2">
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      How many baths?
+                    </label>
+                    <select
+                      placeholder="Bath"
+                      className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
+                      id="bath"
+                      type="number"
+                      value={bath}
+                      onChange={(e) => setBath(e.target.value)}
+                    >
+                      <option>1 bath</option>
+                      <option>2 bath</option>
+                      <option>3 bath</option>
+                      <option>4 bath</option>
+                    </select>
+                  </div>
+
+                  {/* # OF GUEST */}
+                  <div className="mb-10 ml-2">
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      How many guests can you host?
+                    </label>
+                    <select
+                      placeholder="Bath"
+                      className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
+                      id="bath"
+                      type="number"
+                      value={bath}
+                      onChange={(e) => setBath(e.target.value)}
+                    >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                    </select>
                   </div>
                 </div>
               </div>
