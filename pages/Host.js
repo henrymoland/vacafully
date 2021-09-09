@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
+import { DatePicker } from "antd";
 
 function Host() {
   const [propertyName, setPropertyName] = useState("");
@@ -31,34 +32,52 @@ function Host() {
         <section>
           <form className="mt-8 w-full">
             <div className="flex justify-between">
-              {/* UPLOAD IMAGE -- LEFT SIDE --*/}
+              {/* LEFT SIDE */}
               <div>
-                <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
-                  Upload a photo of your listing
-                </label>
-                <div className="flex items-center justify-center md:w-[500px] lg:w-[600px]">
-                  <label className="flex flex-col w-full md:h-[400px] lg:h-[460px] border-4 rounded border-yellow-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
-                    <div className="flex flex-col items-center justify-center pt-32">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="md:w-[90px] md:h-[90px] lg:w-[122px] lg:h-[122px] text-gray-300 group-hover:text-gray-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                        />
-                      </svg>
-                      <p className="pt-1 text-lg tracking-wider text-gray-300 group-hover:text-gray-600">
-                        Upload a photo
-                      </p>
-                    </div>
-                    <input type="file" className="opacity-0" />
+                {/* UPLOAD PHOTO */}
+                <div>
+                  <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                    Upload a photo of your listing
                   </label>
+                  <div className="flex items-center justify-center md:w-[500px] lg:w-[600px]">
+                    <label className="flex flex-col w-full md:h-[400px] lg:h-[400px] border-4 rounded border-yellow-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
+                      <div className="flex flex-col items-center justify-center pt-32">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="md:w-[90px] md:h-[90px] lg:w-[122px] lg:h-[122px] text-gray-300 group-hover:text-gray-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          />
+                        </svg>
+                        <p className="pt-1 text-lg tracking-wider text-gray-300 group-hover:text-gray-600">
+                          Upload a photo
+                        </p>
+                      </div>
+                      <input type="file" className="opacity-0" />
+                    </label>
+                  </div>
+                </div>
+
+                {/* DESCRIPTION */}
+                <div className="mb-6 mt-6 flex-grow">
+                  <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                    Describe your listing
+                  </label>
+                  <textArea
+                    placeholder="Describe your listing"
+                    className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
+                    id="description"
+                    type="text"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
                 </div>
               </div>
 
@@ -124,6 +143,32 @@ function Host() {
                   </div>
                 </div>
 
+                {/* AVAILABILITY */}
+
+                <div className="flex justify-between mb-10">
+                  <div>
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      Available From
+                    </label>
+                    <DatePicker
+                      placeholder="Select date"
+                      className="form-control m-2 border rounded py-2 px-4 text-gray-500 h-10"
+                      onChange={(date, dateString) => setFromDate(dateString)}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
+                      Available To
+                    </label>
+                    <DatePicker
+                      placeholder="Select date"
+                      className="form-control m-2 border rounded py-2 px-4 text-gray-500 h-10"
+                      onChange={(date, dateString) => setToDate(dateString)}
+                    />
+                  </div>
+                </div>
+
                 {/* PRICE */}
                 <div className="flex">
                   <div className="mb-10 flex-grow">
@@ -144,7 +189,7 @@ function Host() {
 
                 {/* BED */}
                 <div className="flex">
-                  <div className="mb-10 flex-grow">
+                  <div className="mb-10">
                     <label className="block uppercase tracking-wide text-gray-700 font-bold text-xs mb-6">
                       How many bedrooms?
                     </label>
@@ -216,6 +261,11 @@ function Host() {
                     </select>
                   </div>
                 </div>
+
+                <button className="bg-yellow-500 font-bold text-white py-3 px-8 rounded mt-6 mb-6">
+                  {" "}
+                  Book Now
+                </button>
               </div>
             </div>
           </form>
