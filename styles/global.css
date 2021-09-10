@@ -15,6 +15,5 @@
 }
 
 .ant-picker-focused {
-  border-color: #c0c0c0 !important;
-  box-shadow: 1px 1px 12px #eeeeee !important;
+  border-color: #f59e0b !important;
 }
