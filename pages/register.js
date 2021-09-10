@@ -28,7 +28,7 @@ function login() {
                 First Name
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                className="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -43,7 +43,7 @@ function login() {
                 Last Name
               </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-300"
+                class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
@@ -57,7 +57,7 @@ function login() {
             </label>
             <input
               placeholder="myemail@gmail.com"
-              className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300 mt-2"
+              className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300 mt-2"
               id="email"
               type="text"
               value={email}
@@ -72,7 +72,7 @@ function login() {
             </label>
             <input
               placeholder="************"
-              className="bg-gray-200 appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-300  mt-2"
+              className="bg-white appearance-none border border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-300  mt-2"
               id="password"
               type="text"
               value={password}
