@@ -33,18 +33,22 @@ function DashboardHeader() {
       </div>
 
       {/* Search Input */}
-      <div className="flex items-center md:border rounded py-2 md:shadow-sm">
-        <input
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-          className="flex-grow pl-5 bg-transparent outline-none"
-          type="text"
-          placeholder="Where are you going?"
-        />
-        <SearchIcon
-          onClick={search}
-          className="hidden md:inline-flex h-10 text-gray-400 rounded p-2 cursor-pointer md:mx-2"
-        />
+      <div className="flex items-center justify-between text-gray-500 text-sm">
+        <p className="cursor-pointer" onClick={() => router.push("/login")}>
+          Your listings
+        </p>
+        <p
+          className="flex space-x-4 items-center justify-end text-gray-500"
+          onClick={() => router.push("/register")}
+        >
+          Your bookings
+        </p>
+        <p
+          className="flex space-x-4 items-center justify-end text-gray-500"
+          onClick={() => router.push("/register")}
+        >
+          Payout settings
+        </p>
       </div>
 
       {/* Authentication Links */}
